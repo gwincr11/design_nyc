@@ -37,7 +37,6 @@
     }
     markers = {}
     function addMarker(project) {
-
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
@@ -48,7 +47,6 @@
                     id: project.id,
                   icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|1DAFEC|ffffff'
                 });
-
 
                 google.maps.event.addListener(markers[project.name], 'click', _.bind(function (project, marker) {
 
@@ -84,10 +82,6 @@
 
         drawMap("40.7142", "-74.0064");
 
-
-        // TODO add markers to map
-
-
         for (i in projects) {
             addMarker(projects[i]);
         }
@@ -103,10 +97,6 @@
             $("#details-carousel").carousel();
         });
 
-        //initilize the modal
-//        $('#details-modal').modal({ show: false});
-
-//            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
 
 
