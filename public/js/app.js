@@ -4,7 +4,7 @@
     var infowindow = new google.maps.InfoWindow(),
         geocoder = new google.maps.Geocoder(),
         first = true,
-        infoTemplate = Handlebars.compile("info-box-template");
+        infoTemplate = Handlebars.compile($("#info-box-template").html());
 
     function drawMap(lat,long){
         var mapOptions = {
@@ -29,11 +29,16 @@
 
 
                 google.maps.event.addListener(project.marker, 'click', _.bind(function(project) {
-                    map.setCenter(project.marker.getPosition());
 
                     var infobox = new google.maps.InfoWindow({
-                        content : infoTemplate(project)
+                        content : infoTemplate(project),
+                        position : project.marker.getPosition(),
+                        maxWidth: 300,
+                        zIndex:1000
                     });
+                    infobox.open(map);
+
+                    map.setCenter(project.marker.getPosition());
 
 //                    map.setZoom(13);
 //                    fadeInStore(markers[name]["id"]);

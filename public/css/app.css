@@ -5,3 +5,17 @@ h2 span {
 html { height: 100% }
 body { height: 100%; margin: 0; padding: 0 }
 #map_canvas { height: 100% }
+
+.info-box .name{
+    font-size: large;
+    color: #89c541;
+}
+
+.info-box dt{
+    font-weight: bold;
+}
+
+.info-box dd{
+    font-size: 90%;
+    color: #767779;
+}

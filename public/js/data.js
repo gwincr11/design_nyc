@@ -45,7 +45,7 @@ var projects = [
   {
     nonprofit: ["Weeksville Heritage Center"],
     design_partner: ["Matiz Architecture & Design (MAD)"],
-    advisors: ["Rob Goodwin", "Perkins + Will"],
+    advisors: ["Rob Goodwin", "Perkins + Will"]
   },
   "1698 Bergen St  Brooklyn, NY 11213",
   "municipality"
