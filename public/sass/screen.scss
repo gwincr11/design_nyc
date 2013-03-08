@@ -128,10 +128,11 @@ header {
     z-index: 9999px;
     top: 0;
     left: 0;
-    width: 365px;
+
     height: 554px;
     #filternav {
       li{
+
         a {
           display: block;
           width: 43px;
@@ -142,7 +143,8 @@ header {
       }
     }
     form {
-      padding: 8px 40px;
+      padding: 8px 30px 12px 20px;
+      width: 320px;
       background: rgba(#0e0f10, .65);
       margin-left: 42px;
       position: absolute;
@@ -157,7 +159,7 @@ header {
       }
 
       h2{
-        margin-bottom: 8px;
+        @include trailer(.8);
       }
       fieldset{
         margin: 8px 0;
@@ -166,6 +168,11 @@ header {
       ul {
         margin-top: 8px;
         li {
+          @include adjust-font-size-to(16px);
+          input {
+            margin-top: -4px;
+            margin-right: 4px;
+          }
           color: #fff;
           height: 20px;
           margin: 12px;
@@ -187,3 +194,35 @@ header {
 .boroughs:hover, .boroughs.current{ background-position: 0 -455px; width: 43px; height: 41px; }
 .needs{ background-position: 0 -546px; width: 43px; height: 41px; }
 .needs:hover, .needs.current{ background-position: 0 -637px; width: 43px; height: 41px; }
+
+.name, .btn {
+  @include trailer(.5)
+}
+
+footer {
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") top repeat-x;
+  width: 100%;
+  float: left;
+  @include trailer(1);
+  @include leader(1);
+  ul {
+    li {
+      display: block;
+      float: left;
+     a {
+      height: 25px;
+      padding: /*2px 12px*/ 2px 22px;
+      text-decoration: none;
+      color: #626262;
+      line-height: 25px;
+      font-size: 18px;
+      text-transform: lowercase;
+        &:hover{
+          color: $green;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+}
