@@ -1,5 +1,6 @@
-var create_project = function(name, short_desc, long_desc, goal, categories, year, state, url, team, location, municipality) {
+var create_project = function(id, name, short_desc, long_desc, goal, categories, year, state, url, team, location, municipality) {
   var project = new Array();
+  project['id'] = id;
   project['name'] = name;
   project['short_desc'] = short_desc;
   project['long_desc'] = long_desc;
@@ -14,7 +15,7 @@ var create_project = function(name, short_desc, long_desc, goal, categories, yea
 };
 
 var projects = [
-  create_project("Two Bridges Neighborhood Council", 
+  create_project(1, "Two Bridges Neighborhood Council",
   "Food Access Guide to local fresh food related businesses", 
   "As developers of affordable housing and advocates for all residents and merchants in the culturally diverse and economically challenged neighborhoods of the Lower East Side, they offer community-based programs and strategic partnerships.",
   "After the closing of a local supermarket, the community needs visual design services for their Food Access Guide to local fresh food related businesses. The guide will be categorized by price, benefits acceptance, offerings, in the form of a multi-language free handout with an online component.", 
@@ -33,7 +34,7 @@ var projects = [
   
   ,
 
-  create_project("Weeksville Heritage Center", 
+  create_project(2, "Weeksville Heritage Center",
   "", 
   "",
   "", 
