@@ -4,3 +4,44 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+$green: #89c541;
+$gray: #767779;
+
+body{
+  color: $gray;
+}
+
+
+a { color:/*#74B64A*/ #555; text-decoration: underline; }
+a:hover { text-decoration:none; }
+
+
+header {
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
+
+  h1 {
+    width: 205px;
+    height: 59px;
+    display:inline-block;
+    float: left;
+    background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
+    text-indent: -9999px;
+  }
+  ul {
+    li {
+
+     a {
+      height: 25px;
+      padding: /*2px 12px*/ 2px 22px;
+      text-decoration: none;
+      color: #626262;
+      line-height: 25px;
+      font-size: 18px;
+      text-transform: lowercase;
+      }
+    }
+  }
+
+}
+
+

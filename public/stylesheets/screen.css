@@ -57,3 +57,37 @@ a img {
 /* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
+
+/* line 10, ../sass/screen.scss */
+body {
+  color: #767779; }
+
+/* line 15, ../sass/screen.scss */
+a {
+  color: #555;
+  text-decoration: underline; }
+
+/* line 16, ../sass/screen.scss */
+a:hover {
+  text-decoration: none; }
+
+/* line 19, ../sass/screen.scss */
+header {
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x; }
+  /* line 22, ../sass/screen.scss */
+  header h1 {
+    width: 205px;
+    height: 59px;
+    display: inline-block;
+    float: left;
+    background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
+    text-indent: -9999px; }
+  /* line 33, ../sass/screen.scss */
+  header ul li a {
+    height: 25px;
+    padding: 2px 22px;
+    text-decoration: none;
+    color: #626262;
+    line-height: 25px;
+    font-size: 18px;
+    text-transform: lowercase; }
