@@ -25,13 +25,54 @@ $green: #89c541;
 $gray: #767779;
 
 body{
+  font-family: Helvetica,Arial,Sans-serif;
   color: $gray;
 }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+p {
+  @include trailer(1);
+  @include adjust-font-size-to(14px);
+  @include adjust-leading-to(1);
+}
 
+a {
+  text-decoration: none;
+}
 
-a { color:/*#74B64A*/ #555; text-decoration: underline; }
+a img {
+  border: 2px solid rgba($gray,.55);
+  @include background-clip(border-box);
+}
+
+ul {
+  font-family: Helvetica,Arial,Sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $gray;
+  font-weight: normal
+}
+
+h1 {
+  @include adjust-font-size-to(36px);
+  @include trailer(0.4);
+  letter-spacing: .03em;
+}
+
+h2 {
+  @include adjust-font-size-to(22px);
+  @include adjust-leading-to(0.5);
+}
+
+h3 {
+  @include adjust-font-size-to(17px);
+}
+
+h4 {
+  @include adjust-font-size-to(17px);
+}
+a { color: #555; text-decoration: underline; }
 a:hover { text-decoration:none; }
 
 
@@ -48,7 +89,7 @@ header {
     float: left;
     background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
     text-indent: -9999px;
-    margin-right: 40px;
+    margin-right: 12px;
     margin-bottom: 4px;
   }
   ul {
@@ -87,10 +128,19 @@ header {
     background: rgba(#000, .6);
     width: 365px;
     height: 554px;
+    h2{
+      margin-bottom: 8px;
+    }
+    fieldset{
+      margin: 8px 0;
+    }
 
     ul {
+      margin-top: 8px;
       li {
         color: #fff;
+        height: 20px;
+        margin: 12px;
       }
     }
   }
