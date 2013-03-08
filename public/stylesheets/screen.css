@@ -57,3 +57,78 @@ a img {
 /* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
+
+/* line 10, ../sass/screen.scss */
+body {
+  color: #767779; }
+
+/* line 13, ../sass/screen.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 17, ../sass/screen.scss */
+a {
+  color: #555;
+  text-decoration: underline; }
+
+/* line 18, ../sass/screen.scss */
+a:hover {
+  text-decoration: none; }
+
+/* line 21, ../sass/screen.scss */
+header {
+  margin: 75px 0 8px 0;
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
+  float: left;
+  width: 100%; }
+  /* line 27, ../sass/screen.scss */
+  header h1 {
+    width: 205px;
+    height: 59px;
+    display: inline-block;
+    float: left;
+    background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
+    text-indent: -9999px;
+    margin-right: 40px;
+    margin-bottom: 4px; }
+  /* line 38, ../sass/screen.scss */
+  header ul li {
+    display: block;
+    float: left; }
+    /* line 41, ../sass/screen.scss */
+    header ul li a {
+      height: 25px;
+      padding: 2px 22px;
+      text-decoration: none;
+      color: #626262;
+      line-height: 25px;
+      font-size: 18px;
+      text-transform: lowercase; }
+      /* line 49, ../sass/screen.scss */
+      header ul li a:hover {
+        color: #89c541;
+        background-color: #fff; }
+
+/* line 58, ../sass/screen.scss */
+#mapWrapper {
+  clear: both;
+  position: relative; }
+  /* line 61, ../sass/screen.scss */
+  #mapWrapper h2 {
+    color: #fff; }
+  /* line 64, ../sass/screen.scss */
+  #mapWrapper #filters {
+    padding: 16px;
+    position: absolute;
+    z-index: 9999px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 365px;
+    height: 554px; }
+  /* line 75, ../sass/screen.scss */
+  #mapWrapper #map_canvas {
+    height: 554px;
+    width: 100%; }

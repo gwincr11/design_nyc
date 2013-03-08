@@ -14,26 +14,48 @@
     <!-- Included CSS Files (Compressed) -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="stylesheets/screen.css">
   </head>
   <body>
     <div class="container">
       <header>
         <h1>Design NYC</h1>
         <nav>
-          <ul>
-            <li>
-              <a href="http://www.designyc.org/about">about</a>
-              <a href="http://www.designyc.org/projects">projects</a>
-              <a href="http://www.designyc.org/category/news">whats' new</a>
-              <a href="http://www.designyc.org/get-involved">get involved</a>
-              <a href="http://www.designyc.org/community">community</a>
-              <a href="http://www.designyc.org/resources">resources</a>
-            </li>
+          <ul class="nav">
+            <li><a href="http://www.designyc.org/about">about</a></li>
+            <li><a href="http://www.designyc.org/projects">projects</a></li>
+            <li><a href="http://www.designyc.org/category/news">what's new</a></li>
+            <li><a href="http://www.designyc.org/get-involved">get involved</a></li>
+            <li><a href="http://www.designyc.org/community">community</a></li>
+            <li><a href="http://www.designyc.org/resources">resources</a></li>
           </ul>
         </nav>
       </header>
+      <section>
 
-      <div id="map_canvas" style="width:100%; height:100%"></div>
+        <h1>Projects</h1>
+
+        <div id="mapWrapper">
+          <div id="map_canvas"></div>
+
+          <div id="filters">
+          <form action="">
+            <fieldset>
+              <h2>Date</h2>
+            </fieldset>
+            <fieldset>
+              <h2>Category</h2>
+            </fieldset>
+            <fieldset>
+              <h2>Burrough</h2>
+            </fieldset>
+          </form>
+        </div>
+
+        </div>
+      </section>
+
+
     </div>
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhYEl0ABP2cdzxar43_8-Rpzl8zpMJl4M&sensor=true"></script>
