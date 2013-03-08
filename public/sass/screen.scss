@@ -198,3 +198,31 @@ header {
 .name, .btn {
   @include trailer(.5)
 }
+
+footer {
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") top repeat-x;
+  width: 100%;
+  float: left;
+  @include trailer(1);
+  @include leader(1);
+  ul {
+    li {
+      display: block;
+      float: left;
+     a {
+      height: 25px;
+      padding: /*2px 12px*/ 2px 22px;
+      text-decoration: none;
+      color: #626262;
+      line-height: 25px;
+      font-size: 18px;
+      text-transform: lowercase;
+        &:hover{
+          color: $green;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+}

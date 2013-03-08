@@ -277,3 +277,28 @@ header {
 /* line 198, ../sass/screen.scss */
 .name, .btn {
   margin-bottom: 0.71429em; }
+
+/* line 202, ../sass/screen.scss */
+footer {
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") top repeat-x;
+  width: 100%;
+  float: left;
+  margin-bottom: 1.42857em;
+  margin-top: 1.42857em; }
+  /* line 209, ../sass/screen.scss */
+  footer ul li {
+    display: block;
+    float: left; }
+    /* line 212, ../sass/screen.scss */
+    footer ul li a {
+      height: 25px;
+      padding: 2px 22px;
+      text-decoration: none;
+      color: #626262;
+      line-height: 25px;
+      font-size: 18px;
+      text-transform: lowercase; }
+      /* line 220, ../sass/screen.scss */
+      footer ul li a:hover {
+        color: #89c541;
+        background-color: #fff; }
