@@ -4,7 +4,8 @@
     var infowindow = new google.maps.InfoWindow(),
         geocoder = new google.maps.Geocoder(),
         first = true,
-        infoTemplate = Handlebars.compile($("#info-box-template").html());
+        infoTemplate = Handlebars.compile($("#info-box-template").html()),
+        detailsTemplate = Handlebars.compile($("#details-template").html());
 
     function drawMap(lat,long){
         var mapOptions = {
@@ -37,19 +38,9 @@
                         zIndex:1000
                     });
                     infobox.open(map);
-
                     map.setCenter(project.marker.getPosition());
-
-//                    map.setZoom(13);
-//                    fadeInStore(markers[name]["id"]);
-//                    var el = $("#"+ name);
-//                    var address = el.find("address").html();
-//                    infowindow.setContent('<h2>' + title + '</h2><br />' + address);
-//                    infowindow.open(map, markers[name]);
                 }, this, project));
 
-
-//                icon: 'http://chart.apis.google.com/chart?chst=d_bubble_text_small&chld=bb|' + project.name + '|1DAFEC|ffffff'
 
                 if (first){
                     map.setCenter(results[0].geometry.location);
@@ -61,15 +52,6 @@
             }
         });
     };
-
-
-//    var projects = [{
-//        id:"1",
-//        name: "Central Harlem Senior Citizens Center",
-//        description : "Central Harlem Senior Citizens Center",
-//        location:"34 W 134th St  New York, NY 10037",
-//        url:"www.chscc.org"
-//    }];
 
 
     $("document").ready(function(){
@@ -91,8 +73,20 @@
         for(i in projects){
             addMarker(projects[i]);
         }
+
+        // listen for clicks on the button
+        $("button.details").live('click', function(e){
+            // hide
+
+            var id = parseInt(this.id.split('-')[1]);
+            var project = _.findWhere(projects, {id: id});
+
+            $("#details-modal").html(detailsTemplate(project)).modal('show');
+        });
+
 //            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
+
 
 })();
 
