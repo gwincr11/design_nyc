@@ -10,7 +10,28 @@
         var mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(lat, long),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            panControl: true,
+            panControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE,
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            scaleControl: true,
+            scaleControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            streetViewControl: true,
+            streetViewControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            }
         }
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     }
