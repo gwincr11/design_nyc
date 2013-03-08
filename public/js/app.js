@@ -36,6 +36,7 @@
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     }
     markers = {}
+    var openmarker = false;
     function addMarker(project) {
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
@@ -56,7 +57,12 @@
                         maxWidth: 300,
                         zIndex: 1000
                     });
+                    if(openmarker) {
+                      openmarker.close();
+                    }
+
                     infobox.open(map);
+                    openmarker = infobox;
                     map.setCenter(markers[project.name].getPosition());
                 }, this, project, markers[project.name]));
 
