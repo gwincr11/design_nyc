@@ -119,6 +119,7 @@ header {
 #mapWrapper{
   clear: both;
   position: relative;
+  @include trailer(1);
   h2 {
     color: #fff;
   }
@@ -141,14 +142,14 @@ header {
       }
     }
     form {
-      padding: 8px 32px;
+      padding: 8px 40px;
       background: rgba(#0e0f10, .65);
-      margin-left: 33px;
+      margin-left: 42px;
       position: absolute;
       top: 0;
       .close {
         position: absolute;
-        right: 5px;
+        right: 8px;
         background-color: $yellow-up;
         padding: 2px 4px;
         color: #fff;
@@ -174,10 +175,15 @@ header {
   }
 
   #map_canvas {
-    height: 554px;
+    height: 554px !important;
     width: 100%;
   }
 }
 
-
-
+.sprite { background: url(http://marin-classics.s3.amazonaws.com/design_elements/csg-513a5c5c07c07.png) no-repeat;}
+.category{ background-position: 0 0; width: 43px; height: 41px; }
+.category:hover, .category.current{ background-position: 0 -91px; width: 43px; height: 41px; }
+.boroughs{ background-position: 0 -364px; width: 43px; height: 41px; }
+.boroughs:hover, .boroughs.current{ background-position: 0 -455px; width: 43px; height: 41px; }
+.needs{ background-position: 0 -546px; width: 43px; height: 41px; }
+.needs:hover, .needs.current{ background-position: 0 -637px; width: 43px; height: 41px; }

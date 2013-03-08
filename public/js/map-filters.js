@@ -4,6 +4,8 @@ var mapFilters = {
     $('#filternav a').click(function (e) {
       e.preventDefault();
       mapFilters.show();
+      $('#filternav .current').removeClass("current")
+      $(this).addClass("current")
       $(this).tab('show');
       $(".close").click(function(){
         mapFilters.hide();
@@ -16,6 +18,7 @@ var mapFilters = {
 
   },
   hide: function(){
+    $('#filternav .current').removeClass("current")
     $("#filters form").fadeOut("fast");
   },
   show: function(){
@@ -24,7 +27,7 @@ var mapFilters = {
   },
   populateMap: function(locations){
     //add elements to map
-    drawMap("38.107420","-122.569703");
+    clearOverlays();
     for(i in locations){
         addMarker(locations[i]);
       }

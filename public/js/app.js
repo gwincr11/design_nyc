@@ -8,7 +8,7 @@
 
     function drawMap(lat, long) {
         var mapOptions = {
-            zoom: 12,
+            zoom: 10,
             center: new google.maps.LatLng(lat, long),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControlOptions: {
@@ -37,7 +37,6 @@
     }
     markers = {}
     function addMarker(project) {
-
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
@@ -48,7 +47,6 @@
                     id: project.id,
                   icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|1DAFEC|ffffff'
                 });
-
 
                 google.maps.event.addListener(markers[project.name], 'click', _.bind(function (project, marker) {
 
@@ -72,22 +70,17 @@
         });
     };
 
+    function clearOverlays() {
+      for (i in markers) {
+        markers[i].setMap(null);
+      }
+    }
+
 
     $("document").ready(function () {
         var i;
 
         drawMap("40.7142", "-74.0064");
-
-        $(window).resize(function () {
-            var h = $(window).height(),
-                offsetTop = 190; // Calculate the top offset
-
-            $('#map_canvas').css('height', (h - offsetTop));
-        }).resize();
-
-
-        // TODO add markers to map
-
 
         for (i in projects) {
             addMarker(projects[i]);
@@ -104,10 +97,6 @@
 //            $("#details-carousel").carousel();
         });
 
-        //initilize the modal
-//        $('#details-modal').modal({ show: false});
-
-//            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
 
 
