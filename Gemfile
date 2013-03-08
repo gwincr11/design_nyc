@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 ruby "1.9.3"
 gem 'rails', '3.2.12'
 gem 'unicorn'
-gem 'pg', '0.12.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
@@ -15,12 +12,17 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
     gem 'spork', '0.9.2'
     gem "launchy", "~> 2.1.2"
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'factory_girl_rails', '4.1.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
 end
 
 # Gems used only for assets and not required
