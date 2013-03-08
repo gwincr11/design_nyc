@@ -26,10 +26,12 @@ header {
     float: left;
     background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
     text-indent: -9999px;
+    margin-right: 40px;
   }
   ul {
     li {
-
+      display: block;
+      float: left;
      a {
       height: 25px;
       padding: /*2px 12px*/ 2px 22px;
