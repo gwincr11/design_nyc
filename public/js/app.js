@@ -84,13 +84,6 @@
 
         drawMap("40.7142", "-74.0064");
 
-        $(window).resize(function () {
-            var h = $(window).height(),
-                offsetTop = 190; // Calculate the top offset
-
-            $('#map_canvas').css('height', (h - offsetTop));
-        }).resize();
-
 
         // TODO add markers to map
 
