@@ -8,7 +8,7 @@
 
     function drawMap(lat, long) {
         var mapOptions = {
-            zoom: 12,
+            zoom: 10,
             center: new google.maps.LatLng(lat, long),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControlOptions: {
@@ -71,6 +71,12 @@
             }
         });
     };
+
+    function clearOverlays() {
+      for (i in markers) {
+        markers[i].setMap(null);
+      }
+    }
 
 
     $("document").ready(function () {

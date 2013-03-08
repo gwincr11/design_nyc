@@ -24,7 +24,7 @@ var mapFilters = {
   },
   populateMap: function(locations){
     //add elements to map
-    drawMap("38.107420","-122.569703");
+    clearOverlays();
     for(i in locations){
         addMarker(locations[i]);
       }

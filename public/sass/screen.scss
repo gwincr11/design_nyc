@@ -119,6 +119,7 @@ header {
 #mapWrapper{
   clear: both;
   position: relative;
+  @include trailer(1);
   h2 {
     color: #fff;
   }
@@ -174,7 +175,7 @@ header {
   }
 
   #map_canvas {
-    height: 554px;
+    height: 554px !important;
     width: 100%;
   }
 }
