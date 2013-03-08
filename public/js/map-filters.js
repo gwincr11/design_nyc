@@ -24,8 +24,9 @@ var mapFilters = {
   },
   populateMap: function(locations){
     //add elements to map
+    drawMap("38.107420","-122.569703");
     for(i in locations){
-          addMarker(locations[i]);
+        addMarker(locations[i]);
       }
   },
   applyFilterToData: function(){
@@ -44,7 +45,8 @@ var mapFilters = {
             return project;
           }
         });
-      finalArr.push(items)
+
+      finalArr = $.merge(items, finalArr);
     });
 
     this.populateMap(finalArr);

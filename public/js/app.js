@@ -16,11 +16,10 @@
     }
 
     function addMarker(project) {
-
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
-                project.marker = new google.maps.Marker({
+                 new google.maps.Marker({
                     position: results[0].geometry.location,
                     map: map,
                     title: project.name,
