@@ -3,7 +3,8 @@
 
     var infowindow = new google.maps.InfoWindow(),
         geocoder = new google.maps.Geocoder(),
-        first = true;
+        first = true,
+        infoTemplate = Handlebars.compile("info-box-template");
 
     function drawMap(lat,long){
         var mapOptions = {
@@ -29,6 +30,10 @@
 
                 google.maps.event.addListener(project.marker, 'click', _.bind(function(project) {
                     map.setCenter(project.marker.getPosition());
+
+                    var infobox = new google.maps.InfoWindow({
+                        content : infoTemplate(project)
+                    });
 
 //                    map.setZoom(13);
 //                    fadeInStore(markers[name]["id"]);
