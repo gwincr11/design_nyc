@@ -180,5 +180,10 @@ header {
   }
 }
 
-
-
+.sprite { background: url(http://marin-classics.s3.amazonaws.com/design_elements/csg-513a5c5c07c07.png) no-repeat;}
+.category{ background-position: 0 0; width: 43px; height: 41px; }
+.category:hover, .category.current{ background-position: 0 -91px; width: 43px; height: 41px; }
+.boroughs{ background-position: 0 -364px; width: 43px; height: 41px; }
+.boroughs:hover, .boroughs.current{ background-position: 0 -455px; width: 43px; height: 41px; }
+.needs{ background-position: 0 -546px; width: 43px; height: 41px; }
+.needs:hover, .needs.current{ background-position: 0 -637px; width: 43px; height: 41px; }

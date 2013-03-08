@@ -4,6 +4,8 @@ var mapFilters = {
     $('#filternav a').click(function (e) {
       e.preventDefault();
       mapFilters.show();
+      $('#filternav .current').removeClass("current")
+      $(this).addClass("current")
       $(this).tab('show');
       $(".close").click(function(){
         mapFilters.hide();
@@ -16,6 +18,7 @@ var mapFilters = {
 
   },
   hide: function(){
+    $('#filternav .current').removeClass("current")
     $("#filters form").fadeOut("fast");
   },
   show: function(){

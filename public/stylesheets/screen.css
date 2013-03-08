@@ -227,3 +227,43 @@ header {
   #mapWrapper #map_canvas {
     height: 554px !important;
     width: 100%; }
+
+/* line 183, ../sass/screen.scss */
+.sprite {
+  background: url(http://marin-classics.s3.amazonaws.com/design_elements/csg-513a5c5c07c07.png) no-repeat; }
+
+/* line 184, ../sass/screen.scss */
+.category {
+  background-position: 0 0;
+  width: 43px;
+  height: 41px; }
+
+/* line 185, ../sass/screen.scss */
+.category:hover, .category.current {
+  background-position: 0 -91px;
+  width: 43px;
+  height: 41px; }
+
+/* line 186, ../sass/screen.scss */
+.boroughs {
+  background-position: 0 -364px;
+  width: 43px;
+  height: 41px; }
+
+/* line 187, ../sass/screen.scss */
+.boroughs:hover, .boroughs.current {
+  background-position: 0 -455px;
+  width: 43px;
+  height: 41px; }
+
+/* line 188, ../sass/screen.scss */
+.needs {
+  background-position: 0 -546px;
+  width: 43px;
+  height: 41px; }
+
+/* line 189, ../sass/screen.scss */
+.needs:hover, .needs.current {
+  background-position: 0 -637px;
+  width: 43px;
+  height: 41px; }
