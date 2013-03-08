@@ -1,4 +1,3 @@
-(function () {
 
 
     var infowindow = new google.maps.InfoWindow(),
@@ -112,5 +111,5 @@
     });
 
 
-})();
+
 

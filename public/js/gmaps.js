@@ -1,5 +1,3 @@
-(function(){
-
 
     var markers = {}
     var infowindow = new google.maps.InfoWindow();
@@ -37,7 +35,7 @@
     $("document").ready(function(){
         drawMap("38.107420","-122.569703");
 
-        $(loop for each marker).each(function(index){
+      /*  $().each(function(index){
             var el = $(this);
             var titleEl = el.find("h2.name").clone();
             var titleChild = titleEl.children("span");
@@ -52,9 +50,7 @@
             var count = index + 1;
 
             addMarker(new google.maps.LatLng(lat, long), "marker"+count, title, count);
-        });
+        });*/
 
 
     });
-
-})();
