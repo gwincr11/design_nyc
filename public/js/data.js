@@ -1,4 +1,4 @@
-var create_project = function(id, name, short_desc, long_desc, goal, categories, year, state, url, team, location, municipality) {
+var create_project = function(id, name, short_desc, long_desc, goal, categories, year, state, url, team, location, municipality, needs) {
   var project = new Array();
   project['id'] = id;
   project['name'] = name;
@@ -10,6 +10,7 @@ var create_project = function(id, name, short_desc, long_desc, goal, categories,
   project['team'] = team
   project['location'] = location
   project['municipality'] = municipality
+  project['needs'] = needs
 
   return project;
 };
@@ -21,7 +22,7 @@ var projects = [
   "After the closing of a local supermarket, the community needs visual design services for their Food Access Guide to local fresh food related businesses. The guide will be categorized by price, benefits acceptance, offerings, in the form of a multi-language free handout with an online component.",
   ["Neighborhood Revitalization", "Social/Economic Justice"],
   2013,
-  "future",
+  "Future",
   "http://www.chscc.org",
   {
     nonprofit: ["Central Harlem Senior Citizens’ Council – Harlem, Manhattan"],
@@ -29,7 +30,8 @@ var projects = [
     advisors: ["Rob Goodwin", "Perkins + Will"]
   },
   "34 W 134th St  New York, NY 10037",
-  "Manhattan"
+  "Manhattan",
+  ["People"]
   ),
 
   create_project(2, "Weeksville Heritage Center", 
@@ -38,7 +40,7 @@ var projects = [
   "They need an interior design strategy for the newly restored historic garage, that will feature interpretive displays about green educational programs, a storage area for their gardening and farmers market-related activities, including a heirloom seed collection and an aquaponics demonstration area.", 
   ["Arts/Community", "Urban Farming + Food"], 
   2013, 
-  "future", 
+  "Future", 
   "http://www.weeksvillesociety.org", 
   { 
     nonprofit: ["Weeksville Heritage Center"],
@@ -46,7 +48,8 @@ var projects = [
     advisors: ["Rob Goodwin", "Perkins + Will"]
   },
   "1698 Bergen St  Brooklyn, NY 11213",
-  "Brooklyn"
+  "Brooklyn",
+  ["People"]
   ),
   
   create_project(3, "Safe Horizon", 
@@ -55,7 +58,7 @@ var projects = [
   "", 
   ["Public Housing", "Sustainability Advocacy"], 
   2013, 
-  "current", 
+  "Current", 
   "http://www.safehorizon.org", 
   { 
     nonprofit: ["Safe Horizon"],
@@ -63,7 +66,8 @@ var projects = [
     advisors: ["Chelsea Mauldin"],
   },
   "2 Lafayette Street, 3rd Floor, New York, NY 10007",
-  "Manhattan"
+  "Manhattan",
+  ["People"]
   ),
   
   create_project(4, "OpenPlans Transportation", 
@@ -72,7 +76,7 @@ var projects = [
   "", 
   ["Public transportation"], 
   2013, 
-  "current", 
+  "Current", 
   "http://transportation.openplans.org", 
   { 
     nonprofit: ["OpenPlans Transportation"],
@@ -80,7 +84,8 @@ var projects = [
     advisors: ["Michael DelGaudio"],
   },
   "148 Lafayette St, PH, New York, NY 10013",
-  "Manhattan"
+  "Manhattan",
+  ["People"]
   ),
   
   create_project(5, "Clemente Soto Velez Center", 
@@ -89,7 +94,7 @@ var projects = [
   "",
   ["Arts/Community", "Public Housing"], 
   2013, 
-  "current",
+  "Current",
   "http://csvcenter.org", 
   { 
     nonprofit: ["Clemente Soto Velez Center"],
@@ -97,7 +102,8 @@ var projects = [
     advisors: ["Lisa Green"],
   },
   "107 Suffolk Street #312, New York, NY 10002",
-  "Manhattan"
+  "Manhattan",
+  ["People", "Supplies"]
   ),
   
   create_project(6, "Neighborhood Economic Development Advocacy Project", 
@@ -105,8 +111,8 @@ var projects = [
   "Neighborhood Economic Development Advocacy Project (NEDAP) is a resource and advocacy center that works with community groups to promote economic justice in NYC’s low income communities and communities of color. NEDAP leads the NYC Immigrant Financial Justice Network, which conducts community education, organizing, and policy advocacy to promote immigrants’ economic rights and financial inclusion.",
   "NEDAP and Rodrigo Corral Design are collaborating to produce a series of Financial Rights Guides that will be widely disseminated through the NYC Immigrant Financial Justice Network and to other NYC groups serving diverse immigrant communities. The goal of the project is to arm new immigrants with concrete information about their rights and where to turn for free, trusted help.  Immigrant groups will use the material as an education and advocacy tool with their members. The guides will be translated in Spanish and other needed languages, including French, Chinese, Korean, Nepali, Urdu, and Bengali.",
   ["Arts/Community", "Social/Economic Justice", "Workforce Empowerment"], 
-  2013, 
-  "current",
+  2010, 
+  "Complete",
   "http://www.nedap.org", 
   { 
     nonprofit: ["Neighborhood Economic Development Advocacy Project"],
@@ -114,7 +120,8 @@ var projects = [
     advisors: ["Gabriela Mirensky, AIGA"],
   },
   "176 Grand Street, Suite 300, New York, NY 10013",
-  "Manhattan"
+  "Manhattan",
+  ["People"]
   ),
   
   create_project(7, "Identity + Style Guide", 
@@ -131,7 +138,8 @@ var projects = [
     advisors: [""]
   },
   "1 Bronx River Parkway, Bronx, NY 10462",  
-  "Bronx"
+  "Bronx",
+  ["People"]
   )
 
 ];
