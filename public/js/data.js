@@ -1,4 +1,4 @@
-var create_project = function(id, name, short_desc, long_desc, goal, categories, year, state, url, team, location, municipality, needs) {
+var create_project = function(id, name, short_desc, long_desc, goal, categories, year, state, url, image, team, location, borough, needs) {
   var project = new Array();
   project['id'] = id;
   project['name'] = name;
@@ -7,9 +7,12 @@ var create_project = function(id, name, short_desc, long_desc, goal, categories,
   project['goal'] = goal;
   project['categories'] = categories;
   project['year'] = year;
+  project['state'] = state;
+  project['url'] = url;
+  project['image'] = image;
   project['team'] = team
   project['location'] = location
-  project['municipality'] = municipality
+  project['borough'] = borough
   project['needs'] = needs
 
   return project;
@@ -24,10 +27,11 @@ var projects = [
   2013,
   "Future",
   "http://www.chscc.org",
+  "http://www.designyc.org/wp-content/uploads/Two-Bridges_thumb2.jpg",
   {
-    nonprofit: ["Central Harlem Senior Citizens’ Council – Harlem, Manhattan"],
-    design_partner: ["Alison Duncan, Landscape Architect"],
-    advisors: ["Rob Goodwin", "Perkins + Will"]
+    nonprofit: ["Two Bridges Neighborhood Council"],
+    design_partner: ["TODA"],
+    advisors: ["David Kohler, OTTO NY"]
   },
   "34 W 134th St  New York, NY 10037",
   "Manhattan",
@@ -41,7 +45,8 @@ var projects = [
   ["Arts/Community", "Urban Farming + Food"], 
   2013, 
   "Future", 
-  "http://www.weeksvillesociety.org", 
+  "http://www.weeksvillesociety.org",
+  "http://www.designyc.org/wp-content/uploads/weeksville_summer.jpg",
   { 
     nonprofit: ["Weeksville Heritage Center"],
     design_partner: ["Matiz Architecture & Design (MAD)"],
@@ -59,7 +64,8 @@ var projects = [
   ["Public Housing", "Sustainability Advocacy"], 
   2013, 
   "Current", 
-  "http://www.safehorizon.org", 
+  "http://www.safehorizon.org",
+  "http://www.designyc.org/wp-content/uploads/Safehorizon_thumb.jpg",
   { 
     nonprofit: ["Safe Horizon"],
     design_partner: ["Reboot"],
@@ -77,7 +83,8 @@ var projects = [
   ["Public transportation"], 
   2013, 
   "Current", 
-  "http://transportation.openplans.org", 
+  "http://transportation.openplans.org",
+  "http://www.designyc.org/wp-content/uploads/OPT.jpg",
   { 
     nonprofit: ["OpenPlans Transportation"],
     design_partner: ["Purpose"],
@@ -95,7 +102,8 @@ var projects = [
   ["Arts/Community", "Public Housing"], 
   2013, 
   "Current",
-  "http://csvcenter.org", 
+  "http://csvcenter.org",
+  "http://www.designyc.org/wp-content/uploads/CSV_thumb1.jpg",
   { 
     nonprofit: ["Clemente Soto Velez Center"],
     design_partner: ["Studio Kudos"],
@@ -113,7 +121,8 @@ var projects = [
   ["Arts/Community", "Social/Economic Justice", "Workforce Empowerment"], 
   2010, 
   "Complete",
-  "http://www.nedap.org", 
+  "http://www.nedap.org",
+  "http://www.designyc.org/wp-content/uploads/NEDAP_p1-e1321304540190.png", 
   { 
     nonprofit: ["Neighborhood Economic Development Advocacy Project"],
     design_partner: ["Rodrigo Corral principal; Gonzalo Muino, illustrator"],
@@ -131,7 +140,8 @@ var projects = [
   ["Arts/Community"], 
   2013, 
   "future",
-  "http://www.bronxriver.org", 
+  "http://www.bronxriver.org",
+  "http://www.designyc.org/wp-content/gallery/04_Bronx%20River%20Alliance/thumbs/thumbs_bronx_1.jpg",
   { 
     nonprofit: ["Bronx River Alliance"],
     design_partner: ["Felix Sockwell", "Tom Vasquez"],
