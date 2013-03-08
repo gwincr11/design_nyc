@@ -40,7 +40,7 @@
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
-                 new google.maps.Marker({
+                 var marker = new google.maps.Marker({
                     position: results[0].geometry.location,
                     map: map,
                     title: project.name,
@@ -48,16 +48,16 @@
                 });
 
 
-                google.maps.event.addListener(project.marker, 'click', _.bind(function (project) {
+                google.maps.event.addListener(marker, 'click', _.bind(function (project) {
 
                     var infobox = new google.maps.InfoWindow({
                         content: infoTemplate(project),
-                        position: project.marker.getPosition(),
+                        position: marker.getPosition(),
                         maxWidth: 300,
                         zIndex: 1000
                     });
                     infobox.open(map);
-                    map.setCenter(project.marker.getPosition());
+                    map.setCenter(marker.getPosition());
                 }, this, project));
 
 
