@@ -4,6 +4,23 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+@import "compass/layout/grid-background";
+@import "compass/css3";
+@import "compass/css3/shared";
+@import "compass/utilities";
+@import "compass/layout/stretching";
+
+// Vertical Rhythm ----------------------------------------------------------
+$base-font-size: 14px;
+$base-line-height: 20px;
+$default-rhythm-border-style: solid;
+$ie-font-ratio: 14px / 100%;
+$base-rhythm-unit: $base-line-height / $base-font-size * 1em;
+$base-leader: ($base-line-height - $base-font-size) * 1em / $base-font-size;
+$base-half-leader: $base-leader / 2;
+@include establish-baseline;
+
 $green: #89c541;
 $gray: #767779;
 
@@ -70,6 +87,12 @@ header {
     background: rgba(#000, .6);
     width: 365px;
     height: 554px;
+
+    ul {
+      li {
+        color: #fff;
+      }
+    }
   }
 
   #map_canvas {
