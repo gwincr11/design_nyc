@@ -38,3 +38,11 @@ dl.team dt{
 dl.description dt{
     padding-top: 20px;
 }
+
+#main-bottom{
+    padding-top: 30px;
+}
+
+.main-right .title{
+    font-size: 30px;
+}
