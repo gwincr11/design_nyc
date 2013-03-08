@@ -58,32 +58,41 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 10, ../sass/screen.scss */
+/* line 61, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 87.5%; }
+
+/* line 64, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 14px;
+  line-height: 1.42857em; }
+
+/* line 27, ../sass/screen.scss */
 body {
   color: #767779; }
 
-/* line 13, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 17, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 a {
   color: #555;
   text-decoration: underline; }
 
-/* line 18, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 a:hover {
   text-decoration: none; }
 
-/* line 21, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 header {
   margin: 75px 0 8px 0;
   background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
   float: left;
   width: 100%; }
-  /* line 27, ../sass/screen.scss */
+  /* line 44, ../sass/screen.scss */
   header h1 {
     width: 205px;
     height: 59px;
@@ -93,11 +102,11 @@ header {
     text-indent: -9999px;
     margin-right: 40px;
     margin-bottom: 4px; }
-  /* line 38, ../sass/screen.scss */
+  /* line 55, ../sass/screen.scss */
   header ul li {
     display: block;
     float: left; }
-    /* line 41, ../sass/screen.scss */
+    /* line 58, ../sass/screen.scss */
     header ul li a {
       height: 25px;
       padding: 2px 22px;
@@ -106,19 +115,19 @@ header {
       line-height: 25px;
       font-size: 18px;
       text-transform: lowercase; }
-      /* line 49, ../sass/screen.scss */
+      /* line 66, ../sass/screen.scss */
       header ul li a:hover {
         color: #89c541;
         background-color: #fff; }
 
-/* line 58, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #mapWrapper {
   clear: both;
   position: relative; }
-  /* line 61, ../sass/screen.scss */
+  /* line 78, ../sass/screen.scss */
   #mapWrapper h2 {
     color: #fff; }
-  /* line 64, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   #mapWrapper #filters {
     padding: 16px;
     position: absolute;
@@ -128,7 +137,10 @@ header {
     background: rgba(0, 0, 0, 0.6);
     width: 365px;
     height: 554px; }
-  /* line 75, ../sass/screen.scss */
+    /* line 92, ../sass/screen.scss */
+    #mapWrapper #filters ul li {
+      color: #fff; }
+  /* line 98, ../sass/screen.scss */
   #mapWrapper #map_canvas {
     height: 554px;
     width: 100%; }
