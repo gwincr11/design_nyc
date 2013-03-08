@@ -23,6 +23,9 @@ $base-half-leader: $base-leader / 2;
 
 $green: #89c541;
 $gray: #767779;
+$yellow-up: #fab416;
+$yellow-down: #9d7212;
+
 
 body{
   font-family: Helvetica,Arial,Sans-serif;
@@ -120,27 +123,51 @@ header {
     color: #fff;
   }
   #filters {
-    padding: 16px;
     position: absolute;
     z-index: 9999px;
     top: 0;
     left: 0;
-    background: rgba(#000, .6);
     width: 365px;
     height: 554px;
-    h2{
-      margin-bottom: 8px;
+    #filternav {
+      li{
+        a {
+          display: block;
+          width: 43px;
+          height: 55px;
+          background-color: $yellow-up;
+          margin-bottom: 6px;
+          text-indent: -9999px;
+        }
+      }
     }
-    fieldset{
-      margin: 8px 0;
-    }
+    form {
+      padding: 8px 32px;
+      background: rgba(#0e0f10, .65);
+      margin-left: 33px;
+      position: absolute;
+      top: 0;
+      .close {
+        position: absolute;
+        right: 5px;
+        background-color: $yellow-up;
+        padding: 2px 4px;
+      }
 
-    ul {
-      margin-top: 8px;
-      li {
-        color: #fff;
-        height: 20px;
-        margin: 12px;
+      h2{
+        margin-bottom: 8px;
+      }
+      fieldset{
+        margin: 8px 0;
+      }
+
+      ul {
+        margin-top: 8px;
+        li {
+          color: #fff;
+          height: 20px;
+          margin: 12px;
+        }
       }
     }
   }
