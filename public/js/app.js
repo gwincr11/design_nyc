@@ -107,6 +107,7 @@
             var project = _.findWhere(projects, {id: id});
 
             $("#details-modal").html(detailsTemplate(project)).modal({show: true});
+            $("#details-carousel").carousel();
         });
 
         //initilize the modal
