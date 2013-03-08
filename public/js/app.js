@@ -1,5 +1,3 @@
-(function(){
-
 
     var infowindow = new google.maps.InfoWindow(),
         geocoder = new google.maps.Geocoder(),
@@ -94,5 +92,5 @@
 //            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
 
-})();
+
 
