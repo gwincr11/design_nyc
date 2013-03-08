@@ -1,8 +1,9 @@
 (function(){
 
 
-    var markers = {}
-    var infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow(),
+        geocoder = new google.maps.Geocoder(),
+        first = true;
 
     function drawMap(lat,long){
         var mapOptions = {
@@ -13,28 +14,56 @@
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     }
 
+    function addMarker(project){
 
-    function addMarker(latLong, name, title, letter){
-        markers[name] = new google.maps.Marker({
-            position: latLong,
-            map: map,
-            title: title,
-            id:name,
-            icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+letter+'|1DAFEC|ffffff'
+        geocoder.geocode( { 'address': project.location}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                project.marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    title: project.name,
+                    id:project.id
+                });
+
+
+                google.maps.event.addListener(project.marker, 'click', _.bind(function(project) {
+                    map.setCenter(project.marker.getPosition());
+                    console.log("clicked");
+//                    map.setZoom(13);
+//                    fadeInStore(markers[name]["id"]);
+//                    var el = $("#"+ name);
+//                    var address = el.find("address").html();
+//                    infowindow.setContent('<h2>' + title + '</h2><br />' + address);
+//                    infowindow.open(map, markers[name]);
+                }, this, project));
+
+
+//                icon: 'http://chart.apis.google.com/chart?chst=d_bubble_text_small&chld=bb|' + project.name + '|1DAFEC|ffffff'
+
+                if (first){
+                    map.setCenter(results[0].geometry.location);
+                    first = false;
+                }
+
+            } else {
+                alert("Geocode was not successful for the following reason: " + status);
+            }
         });
-        google.maps.event.addListener(markers[name], 'click', function() {
-            map.setCenter(markers[name].getPosition());
-            map.setZoom(13);
-            fadeInStore(markers[name]["id"]);
-            var el = $("#"+ name);
-            var address = el.find("address").html();
-            infowindow.setContent('<h2>' + title + '</h2><br />' + address);
-            infowindow.open(map, markers[name]);
-        });
-    }
+    };
+
+
+    var projects = [{
+        id:"1",
+        name: "Central Harlem Senior Citizens Center",
+        description : "Central Harlem Senior Citizens Center",
+        location:"34 W 134th St  New York, NY 10037",
+        url:"www.chscc.org"
+    }];
 
 
     $("document").ready(function(){
+        var i;
 
         drawMap("40.7142", "-74.0064");
 
@@ -46,10 +75,13 @@
         }).resize();
 
 
-
         // TODO add markers to map
 
 
+        for(i in projects){
+            addMarker(projects[i]);
+        }
+//            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
 
 })();
