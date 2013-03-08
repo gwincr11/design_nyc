@@ -23,3 +23,6 @@ body { height: 100%; margin: 0; padding: 0 }
 .info-box img{
     width: 128px;
 }
+#details-modal{
+    sp: 20px;
+}

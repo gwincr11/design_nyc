@@ -8,7 +8,7 @@
 
     function drawMap(lat, long) {
         var mapOptions = {
-            zoom: 16,
+            zoom: 12,
             center: new google.maps.LatLng(lat, long),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControlOptions: {
@@ -35,36 +35,36 @@
         }
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     }
-
+    markers = {}
     function addMarker(project) {
+
         geocoder.geocode({ 'address': project.location}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
-                 var marker = new google.maps.Marker({
-                    position: results[0].geometry.location,
+                markers[project.name] = new google.maps.Marker({
+                  position: results[0].geometry.location,
                     map: map,
                     title: project.name,
-                    id: project.id
+                    id: project.id,
+                  icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|1DAFEC|ffffff'
                 });
 
 
-                google.maps.event.addListener(marker, 'click', _.bind(function (project) {
+                google.maps.event.addListener(markers[project.name], 'click', _.bind(function (project, marker) {
 
                     var infobox = new google.maps.InfoWindow({
                         content: infoTemplate(project),
-                        position: marker.getPosition(),
+                        position: markers[project.name].getPosition(),
                         maxWidth: 300,
                         zIndex: 1000
                     });
                     infobox.open(map);
-                    map.setCenter(marker.getPosition());
-                }, this, project));
+                    map.setCenter(markers[project.name].getPosition());
+                }, this, project, markers[project.name]));
 
-
-                if (first) {
                     map.setCenter(results[0].geometry.location);
                     first = false;
-                }
+
 
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
@@ -108,7 +108,6 @@
 
 //            addMarker(new google.maps.LatLng(p.lat_lon[0], p.lat_lon[1]), p.name, p.name);
     });
-
 
 
 
