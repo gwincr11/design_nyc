@@ -10,6 +10,8 @@ $gray: #767779;
 body{
   color: $gray;
 }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 
 
 a { color:/*#74B64A*/ #555; text-decoration: underline; }
@@ -44,10 +46,37 @@ header {
       line-height: 25px;
       font-size: 18px;
       text-transform: lowercase;
+        &:hover{
+          color: $green;
+          background-color: #fff;
+        }
       }
     }
   }
-
 }
+
+#mapWrapper{
+  clear: both;
+  position: relative;
+  h2 {
+    color: #fff;
+  }
+  #filters {
+    padding: 16px;
+    position: absolute;
+    z-index: 9999px;
+    top: 0;
+    left: 0;
+    background: rgba(#000, .6);
+    width: 365px;
+    height: 554px;
+  }
+
+  #map_canvas {
+    height: 554px;
+    width: 100%;
+  }
+}
+
 
 
