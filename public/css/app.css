@@ -20,7 +20,7 @@ body { height: 100%; margin: 0; padding: 0 }
     color: #767779;
 }
 
-.info-box img{
+img.logo{
     width: 128px;
 }
 #details-modal{
@@ -29,4 +29,12 @@ body { height: 100%; margin: 0; padding: 0 }
 .volunteer{
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+dl.team dt{
+    color: #89c541;
+}
+
+dl.description dt{
+    padding-top: 20px;
 }

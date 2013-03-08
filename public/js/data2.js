@@ -8,9 +8,9 @@ var projects = [
         url: "http://www.chscc.org",
         image: "http://www.designyc.org/wp-content/uploads/Two-Bridges_thumb2.jpg",
         team: {
-            nonprofit: ["Two Bridges Neighborhood Council"],
-            design_partner: ["TODA"],
-            advisors: ["David Kohler, OTTO NY"]
+            nonprofit: "Two Bridges Neighborhood Council",
+            design_partner: "TODA",
+            advisors: "David Kohler, OTTO NY"
         },
         location: "34 W 134th St  New York, NY 10037",
         borough: "Manhattan",
@@ -27,9 +27,9 @@ var projects = [
         url: "http://www.weeksvillesociety.org",
         image: "http://www.designyc.org/wp-content/uploads/weeksville_summer.jpg",
         team: {
-            nonprofit: ["Weeksville Heritage Center"],
-            design_partner: ["Matiz Architecture & Design (MAD)"],
-            advisors: ["Rob Goodwin", "Perkins + Will"]
+            nonprofit: "Weeksville Heritage Center",
+            design_partner: "Matiz Architecture & Design (MAD)",
+            advisors: "Rob Goodwin, Perkins + Will"
         },
         location: "1698 Bergen St  Brooklyn, NY 11213",
         borough: "Brooklyn",
@@ -39,16 +39,16 @@ var projects = [
         id: 3, name: "Safe Horizon",
         short_desc: "A campaign to help human traffic victims gain agency by ReBoot",
         long_desc: "Safe Horizon’s Anti-Trafficking Program provides services to all victims of human trafficking, including both labor and sex trafficking. They are in need of outreach materials based upon the testimonies of survivors, as well as training materials for member-led, community-based organizations.",
-        goal: "",
+        goal: "Safe Horizon’s Anti-Trafficking Program provides services to all victims of human trafficking, including both labor and sex trafficking. They are in need of outreach materials based upon the testimonies of survivors, as well as training materials for member-led, community-based organizations.",
         categories: ["Public Housing", "Sustainability Advocacy"],
         year: 2013,
         state: "Current",
         url: "http://www.safehorizon.org",
         image: "http://www.designyc.org/wp-content/uploads/Safehorizon_thumb.jpg",
         team: {
-            nonprofit: ["Safe Horizon"],
-            design_partner: ["Reboot"],
-            advisors: ["Chelsea Mauldin"]
+            nonprofit: "Safe Horizon",
+            design_partner: "Reboot",
+            advisors: "Chelsea Mauldin"
         },
         location: "2 Lafayette Street, 3rd Floor, New York, NY 10007",
         borough: "Manhattan",
