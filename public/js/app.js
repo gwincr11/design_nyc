@@ -29,7 +29,7 @@
 
                 google.maps.event.addListener(project.marker, 'click', _.bind(function(project) {
                     map.setCenter(project.marker.getPosition());
-                    console.log("clicked");
+
 //                    map.setZoom(13);
 //                    fadeInStore(markers[name]["id"]);
 //                    var el = $("#"+ name);
@@ -53,13 +53,13 @@
     };
 
 
-    var projects = [{
-        id:"1",
-        name: "Central Harlem Senior Citizens Center",
-        description : "Central Harlem Senior Citizens Center",
-        location:"34 W 134th St  New York, NY 10037",
-        url:"www.chscc.org"
-    }];
+//    var projects = [{
+//        id:"1",
+//        name: "Central Harlem Senior Citizens Center",
+//        description : "Central Harlem Senior Citizens Center",
+//        location:"34 W 134th St  New York, NY 10037",
+//        url:"www.chscc.org"
+//    }];
 
 
     $("document").ready(function(){

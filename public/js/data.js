@@ -13,8 +13,6 @@ var create_project = function(name, short_desc, long_desc, goal, categories, yea
   return project;
 };
 
-var locations
-
 var projects = [
   create_project("Two Bridges Neighborhood Council",
   "Food Access Guide to local fresh food related businesses",
@@ -33,10 +31,12 @@ var projects = [
   "municipality"
   ),
 
+  ,
+
   create_project("Weeksville Heritage Center",
   "",
-  "Set in Bedford-Stuyvesant, Brooklyn  the Weeksville Heritage Center is a multi-dimensional museum dedicated to preserving the history of what was once a vibrant 19th century community of free African-Americans.",
-  "They need an interior design strategy for the newly restored historic garage, that will feature interpretive displays about green educational programs, a storage area for their gardening and farmers market-related activities, including a heirloom seed collection and an aquaponics demonstration area.",
+  "",
+  "",
   ["arts/community", "urban farming + food"],
   2013,
   "future",
@@ -44,9 +44,10 @@ var projects = [
   {
     nonprofit: ["Weeksville Heritage Center"],
     design_partner: ["Matiz Architecture & Design (MAD)"],
-    advisors: ["Rob Goodwin", "Perkins + Will"]
+    advisors: ["Rob Goodwin", "Perkins + Will"],
   },
   "1698 Bergen St  Brooklyn, NY 11213",
   "municipality"
   )
+
 ];
