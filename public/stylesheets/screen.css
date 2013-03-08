@@ -67,83 +67,83 @@ html {
   font-size: 14px;
   line-height: 1.42857em; }
 
-/* line 27, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 body {
   font-family: Helvetica,Arial,Sans-serif;
   color: #767779; }
 
-/* line 31, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 33, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 p {
   margin-bottom: 1.42857em;
   font-size: 1em;
   line-height: 1.42857em;
   line-height: 1.42857em; }
 
-/* line 39, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 a {
   text-decoration: none; }
 
-/* line 43, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 a img {
   border: 2px solid rgba(118, 119, 121, 0.55);
   -webkit-background-clip: border;
   -moz-background-clip: border;
   background-clip: border-box; }
 
-/* line 48, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 ul {
   font-family: Helvetica,Arial,Sans-serif; }
 
-/* line 52, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #767779;
   font-weight: normal; }
 
-/* line 57, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 h1 {
   font-size: 2.57143em;
   line-height: 1.11111em;
   margin-bottom: 0.57143em;
   letter-spacing: .03em; }
 
-/* line 63, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 h2 {
   font-size: 1.57143em;
   line-height: 1.81818em;
   line-height: 0.71429em; }
 
-/* line 68, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 h3 {
   font-size: 1.21429em;
   line-height: 2.35294em; }
 
-/* line 72, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 h4 {
   font-size: 1.21429em;
   line-height: 2.35294em; }
 
-/* line 75, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 a {
   color: #555;
   text-decoration: underline; }
 
-/* line 76, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 a:hover {
   text-decoration: none; }
 
-/* line 79, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 header {
   margin: 75px 0 8px 0;
   background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
   float: left;
   width: 100%; }
-  /* line 85, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
   header h1 {
     width: 205px;
     height: 59px;
@@ -153,11 +153,11 @@ header {
     text-indent: -9999px;
     margin-right: 12px;
     margin-bottom: 4px; }
-  /* line 96, ../sass/screen.scss */
+  /* line 99, ../sass/screen.scss */
   header ul li {
     display: block;
     float: left; }
-    /* line 99, ../sass/screen.scss */
+    /* line 102, ../sass/screen.scss */
     header ul li a {
       height: 25px;
       padding: 2px 22px;
@@ -166,43 +166,62 @@ header {
       line-height: 25px;
       font-size: 18px;
       text-transform: lowercase; }
-      /* line 107, ../sass/screen.scss */
+      /* line 110, ../sass/screen.scss */
       header ul li a:hover {
         color: #89c541;
         background-color: #fff; }
 
-/* line 116, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #mapWrapper {
   clear: both;
   position: relative; }
-  /* line 119, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   #mapWrapper h2 {
     color: #fff; }
-  /* line 122, ../sass/screen.scss */
+  /* line 125, ../sass/screen.scss */
   #mapWrapper #filters {
-    padding: 16px;
     position: absolute;
     z-index: 9999px;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
     width: 365px;
     height: 554px; }
-    /* line 131, ../sass/screen.scss */
-    #mapWrapper #filters h2 {
-      margin-bottom: 8px; }
     /* line 134, ../sass/screen.scss */
-    #mapWrapper #filters fieldset {
-      margin: 8px 0; }
-    /* line 138, ../sass/screen.scss */
-    #mapWrapper #filters ul {
-      margin-top: 8px; }
-      /* line 140, ../sass/screen.scss */
-      #mapWrapper #filters ul li {
-        color: #fff;
-        height: 20px;
-        margin: 12px; }
-  /* line 148, ../sass/screen.scss */
+    #mapWrapper #filters #filternav li a {
+      display: block;
+      width: 43px;
+      height: 55px;
+      background-color: #fab416;
+      margin-bottom: 6px;
+      text-indent: -9999px; }
+    /* line 144, ../sass/screen.scss */
+    #mapWrapper #filters form {
+      padding: 8px 32px;
+      background: rgba(14, 15, 16, 0.65);
+      margin-left: 33px;
+      position: absolute;
+      top: 0; }
+      /* line 150, ../sass/screen.scss */
+      #mapWrapper #filters form .close {
+        position: absolute;
+        right: 5px;
+        background-color: #fab416;
+        padding: 2px 4px; }
+      /* line 157, ../sass/screen.scss */
+      #mapWrapper #filters form h2 {
+        margin-bottom: 8px; }
+      /* line 160, ../sass/screen.scss */
+      #mapWrapper #filters form fieldset {
+        margin: 8px 0; }
+      /* line 164, ../sass/screen.scss */
+      #mapWrapper #filters form ul {
+        margin-top: 8px; }
+        /* line 166, ../sass/screen.scss */
+        #mapWrapper #filters form ul li {
+          color: #fff;
+          height: 20px;
+          margin: 12px; }
+  /* line 175, ../sass/screen.scss */
   #mapWrapper #map_canvas {
     height: 554px;
     width: 100%; }
