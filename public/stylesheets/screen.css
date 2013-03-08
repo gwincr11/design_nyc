@@ -196,15 +196,15 @@ header {
       text-indent: -9999px; }
     /* line 144, ../sass/screen.scss */
     #mapWrapper #filters form {
-      padding: 8px 32px;
+      padding: 8px 40px;
       background: rgba(14, 15, 16, 0.65);
-      margin-left: 33px;
+      margin-left: 42px;
       position: absolute;
       top: 0; }
       /* line 150, ../sass/screen.scss */
       #mapWrapper #filters form .close {
         position: absolute;
-        right: 5px;
+        right: 8px;
         background-color: #fab416;
         padding: 2px 4px;
         color: #fff;
