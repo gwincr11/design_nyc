@@ -85,7 +85,29 @@
     </div>
 
     <script id="info-box-template" type="text/x-handlebars">
-        <div>This is the {{name}} project.</div>
+        <div class="info-box">
+            <div class="name">{{name}}</div>
+            <dl>
+                <dt>Organization</dt>
+                <dd>{{team.nonprofit}}</dd>
+            </dl>
+            <dl>
+                <dt>Design Partner</dt>
+                <dd>{{team.design_partner}}</dd>
+            </dl>
+            <dl>
+                <dt>Advisors</dt>
+                <dd>{{team.advisors}}</dd>
+            </dl>
+            <dl>
+                <dt>Goal</dt>
+                <dd>{{goal}}</dd>
+            </dl>
+            <dl>
+                <dt>Categories</dt>
+                <dd>{{categories}}</dd>
+            </dl>
+        </div>
     </script>
 
 
