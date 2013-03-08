@@ -135,8 +135,7 @@ header {
           display: block;
           width: 43px;
           height: 55px;
-          background-color: $yellow-up;
-          margin-bottom: 6px;
+          background-color: $gray;
           text-indent: -9999px;
         }
       }
@@ -152,6 +151,8 @@ header {
         right: 5px;
         background-color: $yellow-up;
         padding: 2px 4px;
+        color: #fff;
+        opacity: .75;
       }
 
       h2{
