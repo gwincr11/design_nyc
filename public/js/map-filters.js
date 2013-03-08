@@ -27,6 +27,11 @@ var mapFilters = {
   },
   populateMap: function(locations){
     //add elements to map
+    if(locations.length == 0) {
+      for(i in projects){
+          addMarker(projects[i]);
+        }
+    }
     clearOverlays();
     for(i in locations){
         addMarker(locations[i]);
