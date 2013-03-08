@@ -73,8 +73,11 @@ a:hover {
 
 /* line 19, ../sass/screen.scss */
 header {
-  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x; }
-  /* line 22, ../sass/screen.scss */
+  margin: 75px 0 8px 0;
+  background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
+  float: left;
+  width: 100%; }
+  /* line 25, ../sass/screen.scss */
   header h1 {
     width: 205px;
     height: 59px;
@@ -82,12 +85,13 @@ header {
     float: left;
     background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
     text-indent: -9999px;
-    margin-right: 40px; }
-  /* line 32, ../sass/screen.scss */
+    margin-right: 40px;
+    margin-bottom: 4px; }
+  /* line 36, ../sass/screen.scss */
   header ul li {
     display: block;
     float: left; }
-    /* line 35, ../sass/screen.scss */
+    /* line 39, ../sass/screen.scss */
     header ul li a {
       height: 25px;
       padding: 2px 22px;

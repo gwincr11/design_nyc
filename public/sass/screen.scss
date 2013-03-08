@@ -17,7 +17,10 @@ a:hover { text-decoration:none; }
 
 
 header {
+  margin: 75px 0 8px 0;
   background: url("http://www.designyc.org/wp-content/themes/designyc/images/bg-green-dot.png") bottom repeat-x;
+  float: left;
+  width: 100%;
 
   h1 {
     width: 205px;
@@ -27,6 +30,7 @@ header {
     background: url("http://www.designyc.org/wp-content/themes/designyc/images/designyc-logo.png") top left no-repeat;
     text-indent: -9999px;
     margin-right: 40px;
+    margin-bottom: 4px;
   }
   ul {
     li {
