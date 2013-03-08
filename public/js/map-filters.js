@@ -27,11 +27,6 @@ var mapFilters = {
   },
   populateMap: function(locations){
     //add elements to map
-    if(locations.length == 0) {
-      for(i in projects){
-          addMarker(projects[i]);
-        }
-    }
     clearOverlays();
     for(i in locations){
         addMarker(locations[i]);
@@ -40,10 +35,12 @@ var mapFilters = {
   applyFilterToData: function(){
     //get matching dataset and return array to populate map
     var finalArr = [];
+    
+    var items = projects
 
     mapFilters.form.find('input:checked').each(function(){
       var name = this.name;
-      var items = _.filter(projects,
+      items = _.filter(items,
         function(project){
           if(name === project.borough){
             return project;
@@ -54,9 +51,9 @@ var mapFilters = {
           }
         });
 
-      finalArr = $.merge(items, finalArr);
+      
     });
-
+    finalArr = items;
     this.populateMap(finalArr);
   }
 
